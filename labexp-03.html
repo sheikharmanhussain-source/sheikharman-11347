@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fresh Mart Grocery Shop</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #f2f2f2;
+            margin: 0;
+        }
+
+        header {
+            background-color: green;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        section {
+            background-color: white;
+            margin: 15px;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        button {
+            padding: 8px 15px;
+            background-color: green;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: darkgreen;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Fresh Mart Grocery Shop</h1>
+    <p>Owner: Sheikh Arman Hussain</p>
+</header>
+
+<section>
+    <h2>Available Items</h2>
+    <p id="items">Rice, Flour, Oil, Sugar</p>
+    <button onclick="changeItems()">Show More Items</button>
+</section>
+
+<section>
+    <h2>Price Calculator</h2>
+
+    Quantity:
+    <input type="number" id="qty"><br><br>
+
+    Price per item:
+    <input type="number" id="price"><br><br>
+
+    <button onclick="calculate()">Calculate Total</button>
+
+    <p id="total"></p>
+</section>
+
+<section>
+    <h2>Shop Status</h2>
+    <button onclick="checkStatus()">Check Shop Status</button>
+    <p id="status"></p>
+</section>
+
+<script>
+    function changeItems() {
+        document.getElementById("items").innerHTML =
+        "Rice, Flour, Oil, Sugar, Biscuit, Chips";
+    }
+
+    function calculate() {
+        var quantity = document.getElementById("qty").value;
+        var price = document.getElementById("price").value;
+
+        if (quantity > 0 && price > 0) {
+            var totalAmount = quantity * price;
+            document.getElementById("total").innerHTML =
+            "Total Amount: ₹" + totalAmount;
+        } else {
+            document.getElementById("total").innerHTML =
+            "Please enter valid values";
+        }
+    }
+
+    function checkStatus() {
+        var time = new Date().getHours();
+
+        if (time >= 9 && time <= 21) {
+            document.getElementById("status").innerHTML =
+            "Shop is Open";
+        } else {
+            document.getElementById("status").innerHTML =
+            "Shop is Closed";
+        }
+    }
+</script>
+
+</body>
+</html>

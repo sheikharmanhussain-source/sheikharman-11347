@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fresh Mart Grocery Shop</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        header {
+            background-color: #2e8b57;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #1f6b44;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 10px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: yellow;
+        }
+
+        section {
+            background-color: white;
+            margin: 15px;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        .product-box {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .item {
+            background-color: #e6ffe6;
+            padding: 15px;
+            width: 200px;
+            border: 2px solid green;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .item:hover {
+            transform: scale(1.05);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #2e8b57;
+            color: white;
+        }
+
+        form input, form select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+        }
+
+        footer {
+            background-color: #1f6b44;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        @media (max-width: 600px) {
+            nav a {
+                display: block;
+                margin: 5px;
+            }
+
+            .product-box {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Fresh Mart Grocery Shop</h1>
+    <p>Owner: Sheikh Arman Hussain</p>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">Products</a>
+    <a href="#">Price</a>
+    <a href="#">Order</a>
+</nav>
+
+<section>
+    <h2>About Shop</h2>
+    <p>Fresh Mart provides fresh grocery items at reasonable prices.</p>
+</section>
+
+<section>
+    <h2>Products</h2>
+    <div class="product-box">
+        <div class="item">Rice</div>
+        <div class="item">Flour</div>
+        <div class="item">Oil</div>
+        <div class="item">Sugar</div>
+    </div>
+</section>
+
+<section>
+    <h2>Price List</h2>
+    <table>
+        <tr>
+            <th>Item</th>
+            <th>Quantity</th>
+            <th>Price</th>
+        </tr>
+        <tr>
+            <td>Rice</td>
+            <td>1 Kg</td>
+            <td>60</td>
+        </tr>
+        <tr>
+            <td>Flour</td>
+            <td>1 Kg</td>
+            <td>50</td>
+        </tr>
+        <tr>
+            <td>Oil</td>
+            <td>1 L</td>
+            <td>140</td>
+        </tr>
+    </table>
+</section>
+
+<section>
+    <h2>Order Form</h2>
+    <form>
+        Name
+        <input type="text">
+
+        Mobile
+        <input type="number">
+
+        Product
+        <select>
+            <option>Rice</option>
+            <option>Flour</option>
+            <option>Oil</option>
+        </select>
+
+        Quantity
+        <input type="number"><br><br>
+
+        <input type="submit" value="Place Order">
+    </form>
+</section>
+
+<footer>
+    <p>© 2026 Fresh Mart Grocery Shop</p>
+</footer>
+
+</body>
+</html>
