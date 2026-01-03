@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sheikh Arman Hussain | Portfolio</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        header {
+            background-color: #222;
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #444;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 10px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: yellow;
+        }
+
+        section {
+            background-color: white;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .skills span {
+            display: inline-block;
+            background-color: #ddd;
+            padding: 8px 12px;
+            margin: 5px;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px 15px;
+            background-color: #222;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: black;
+        }
+
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Sheikh Arman Hussain</h1>
+    <p>CSE (AI & ML) Student</p>
+</header>
+
+<nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="about">
+    <h2>About Me</h2>
+    <p>
+        I am Sheikh Arman Hussain, a Computer Science student specializing in
+        Artificial Intelligence and Machine Learning. I am learning web
+        development and programming.
+    </p>
+</section>
+
+<section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+        <span>C</span>
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+    </div>
+    <br>
+    <button onclick="showMoreSkills()">Show More Skills</button>
+    <p id="moreSkills"></p>
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+    <ul id="projectList">
+        <li>Grocery Shop Website</li>
+        <li>Portfolio Website</li>
+    </ul>
+    <button onclick="addProject()">Add Project</button>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <p>Email: arman@example.com</p>
+    <p>Location: Bhilai, Chhattisgarh</p>
+    <button onclick="showMessage()">Click Me</button>
+    <p id="message"></p>
+</section>
+
+<footer>
+    <p>© 2026 Sheikh Arman Hussain</p>
+</footer>
+
+<script>
+    function showMoreSkills() {
+        document.getElementById("moreSkills").innerHTML =
+        "Java, Python, Basics of AI & ML";
+    }
+
+    function addProject() {
+        const li = document.createElement("li");
+        li.textContent = "JavaScript Mini Projects";
+        document.getElementById("projectList").appendChild(li);
+    }
+
+    function showMessage() {
+        document.getElementById("message").innerHTML =
+        "Thank you for visiting my portfolio!";
+    }
+</script>
+
+</body>
+</html>
